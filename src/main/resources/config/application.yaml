@@ -1,1 +1,16 @@
-dataso
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/AgentsToEveryone
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    #hibernate:
+      # 'update' is useful for development, but consider 'validate' or 'none' for production
+      # ddl-auto: update
+    # Shows the SQL queries in the console (optional, good for debugging)
+    show-sql: true
+    properties:
+      hibernate:
+        # Specifies the dialect for PostgreSQL
+        dialect: org.hibernate.dialect.PostgreSQLDialect
